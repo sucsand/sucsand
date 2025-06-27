@@ -1,16 +1,57 @@
-## Hi there 👋
+## 🧬 Zygisk Frida Gadget 模块使用指南
 
-<!--
-**sucsand/sucsand** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+> 一个基于 Zygisk 的 Frida 注入模块，绕过传统 `frida-server` 的检测方式。
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### ⚙️ 功能简介
+
+- ⚡ 本模块可通过注入 `gadget.so` 实现 Frida 脚本注入，避免 `frida-server` 进程被直接识别或检测。
+- 📱 适用于已 **Root** 的 Android 设备，要求已启用 **Magisk** 或 **KernelSU** 的 **Zygisk 环境**。
+- 🎬 视频教程：[点击观看](https://b23.tv/pZk4AUi)
+
+---
+
+### 🍽️ 安装与使用步骤
+
+```bash
+1. 前往项目仓库：https://github.com/sucsand/sucsand，进入 Release 页面下载最新的 ZIP 安装包。
+
+2. 将 ZIP 文件推送到手机，在 Magisk 或 KernelSU 中刷入该模块。
+   - 💡 若使用 KernelSU，建议启用 LKM 模式以获得更高的稳定性。
+
+3. 刷入完成后重启手机，系统将自动安装 `sucsand.apk`。
+   - 打开 App，勾选你需要注入的目标 App；
+   - 建议设置启动延迟为 100ms 以提升注入稳定性。
+
+4. 勾选后，启动目标 App。此时目标 App 将保持挂起状态，等待 Gadget 注入。
+
+5. 确保手机和电脑处于同一局域网内，使用以下命令注入脚本：
+   frida -H <yourPhoneIp>:9999 -F -l yourScript.js
+
+   👉 若你希望使用本地连接，可通过端口转发：
+   adb forward tcp:9999 tcp:9999
+
+   然后运行：
+   frida -H 127.0.0.1:9999 -F -l yourScript.js
+```
+
+### ⚙️ Gadget 配置说明
+默认配置为 listen 模式，监听端口 9999，你也可以根据需要修改模式或端口。
+
+更多详细说明请参考 Frida 官方文档
+```
+{
+
+  "interaction": {
+    "type": "listen",
+    "address": "0.0.0.0",
+    "port": 9999,
+    "on_port_conflict": "fail",
+    "on_load": "wait"
+  }
+}
+```
+### ⚠️ 注意事项
+- ❗ 使用风险请自行承担
+本模块仅供研究与安全分析用途，禁止用于非法活动。
