@@ -52,6 +52,16 @@
   }
 }
 ```
+
+### ⚙️加我微信(备注来意)、加入微信群聊、请我一杯咖啡
+
+<img src="https://github.com/user-attachments/assets/240deabc-1f0d-4a21-bebb-0947d8169326" width="210px">
+<img src="https://github.com/user-attachments/assets/1549eead-0b1f-4013-800d-cec3a332b3ec" width="210px">
+<img src="https://github.com/user-attachments/assets/d1cdac40-01ce-4669-ad8d-55ff814a1e24" width="210px">
+
+
 ### ⚠️ 注意事项
 - ❗ 使用风险请自行承担
 本模块仅供研究与安全分析用途，禁止用于非法活动。
+
+
