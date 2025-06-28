@@ -1,6 +1,7 @@
 ## 🧬 Zygisk Frida Gadget 模块使用指南
 
-> 一个基于 Zygisk 的 Frida 注入模块，绕过传统 `frida-server` 的检测方式。
+- 一个基于 Zygisk 的 Frida 注入模块，绕过传统 `frida-server` 的检测方式，仅支持arm64
+- Inject gadget.so into target app via Zygisk. Only supports arm64
 
 ---
 
