@@ -23,7 +23,9 @@
 
 3. 刷入完成后重启手机，系统将自动安装 `sucsand.apk`。
    - 打开 App，勾选你需要注入的目标 App；
-   - 建议设置启动延迟为 100ms以上 以提升注入稳定性。
+   - 第1个框不填默认为模块自带的libgadget.so,可以填写你自己本地的libgadget.so文件路径，例如：/data/local/tmp/libgadget.so(你也可以直接解压缩模块后替换该文件，重新压缩后刷入即可)
+   - 第2个框,不填默认为配置的listen模式.可以填写你的Gadget注入模式，参考frida官网
+   - 第3个框,建议设置启动延迟为 100ms以上 以提升注入稳定性。
 
 4. 勾选后，启动目标 App。此时目标 App 将保持挂起状态，等待 Gadget 注入。
 
@@ -54,7 +56,7 @@
 }
 ```
 
-### ☕️ 加我微信(备注来意)、加入微信群聊、请我一杯咖啡(thanks)
+### ☕️ 加我微信(备注来意)、加入微信群聊、请我一杯咖啡(如果你觉得对你有帮助thanks)
 
 <img src="https://github.com/user-attachments/assets/240deabc-1f0d-4a21-bebb-0947d8169326" width="210px">
 <img src="https://github.com/user-attachments/assets/1549eead-0b1f-4013-800d-cec3a332b3ec" width="210px">
