@@ -23,7 +23,7 @@
 
 3. 刷入完成后重启手机，系统将自动安装 `sucsand.apk`。
    - 打开 App，勾选你需要注入的目标 App；
-   - 第1个框不填默认为模块自带的libgadget.so,可以填写你自己本地的libgadget.so文件路径，
+   - 第1个框不填默认为模块自带的libgadget.so(可能会与你本地frida版本不兼容),可以填写你自己本地的libgadget.so文件路径，
      例如：/data/local/tmp/libgadget.so(你也可以直接解压缩模块后替换该文件，重新压缩后刷入即可)
 
    - 第2个框,不填默认为配置的listen模式.可以填写你自己的libgadget.config.so文件路径，
