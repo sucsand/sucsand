@@ -25,8 +25,12 @@
    - 打开 App，勾选你需要注入的目标 App；
    - 第1个框不填默认为模块自带的libgadget.so,可以填写你自己本地的libgadget.so文件路径，
      例如：/data/local/tmp/libgadget.so(你也可以直接解压缩模块后替换该文件，重新压缩后刷入即可)
-   - 第2个框,不填默认为配置的listen模式.可以填写你的Gadget注入模式，参考frida官网
+
+   - 第2个框,不填默认为配置的listen模式.可以填写你自己的libgadget.config.so文件路径，
+     例如：/data/local/tmp/libgadget.config.so(你也可以直接解压缩模块后替换该文件，重新压缩后刷入即可)
+
    - 第3个框,建议设置启动延迟为 100ms以上 以提升注入稳定性。
+
 
 4. 勾选后，启动目标 App。此时目标 App 将保持挂起状态，等待 Gadget 注入。
 
