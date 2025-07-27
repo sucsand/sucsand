@@ -10,6 +10,7 @@
 - ⚡ 本模块可通过注入 `gadget.so` 实现 Frida 脚本注入，避免 `frida-server` 进程被直接识别或检测。
 - 📱 适用于已 **Root** 的 Android 设备，要求已启用 **Magisk** 或 **KernelSU** 的 **Zygisk 环境**。
 - 🎬 视频教程：[点击观看](https://b23.tv/pZk4AUi)
+- 🎬 微信公众号：https://mp.weixin.qq.com/s/GMfiT2SkX9kyeEPouDrFKg
 
 ---
 
